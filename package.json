@@ -1,0 +1,32 @@
+{
+  "name": "@becode/stream",
+  "version": "0.0.1",
+  "description": "A small react/graphql app",
+  "private": true,
+  "scripts": {},
+  "keywords": [],
+  "author": "leny <leny@becode.org>",
+  "license": "ISC",
+  "devDependencies": {
+    "@becode/eslint-config": "^0.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-unicorn": "^17.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npx eslint --fix --cache",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  }
+}
