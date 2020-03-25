@@ -10,6 +10,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import {ApolloProvider} from "react-apollo";
+import apolloClient from "./core/apollo";
+
 import RootComponent from "./components/root";
 
-ReactDOM.render(<RootComponent />, document.querySelector("#app"));
+ReactDOM.render(
+    <ApolloProvider client={apolloClient}>
+        <RootComponent />
+    </ApolloProvider>,
+    document.querySelector("#app"),
+);

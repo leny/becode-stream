@@ -9,6 +9,7 @@
 import React, {useState, useCallback} from "react";
 import {Container, Row, Col, Card, Button} from "react-bootstrap";
 import classnames from "classnames";
+import MeCard from "./me-card";
 
 const RootComponent = () => {
     const [showMe, setShowMe] = useState(false);
@@ -18,7 +19,7 @@ const RootComponent = () => {
     let $content;
 
     if (showMe) {
-        $content = <p>{"I will, I will."}</p>;
+        $content = <MeCard />;
     } else {
         $content = (
             <div className={classnames("mt-3", "text-center")}>
